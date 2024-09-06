@@ -87,8 +87,8 @@ export default function Home() {
             <div className='md:mt-96 invisible md:visible md:-mr-[200px] '>
               <Image
                 src='/object1.png'
-                width={50}
-                height={50}
+                width={150}
+                height={100}
                 alt='symbol'
                 className='md:w-[200px] md:h-[100px] z-10 order-1 -mt-10 scale-[0.6] md:scale-[1.3]'
               />

@@ -70,8 +70,8 @@ function Footer()  {
                         <div className=" md:-mr-24">
                             <Image
                                 src='/object1.png'
-                                width={50}
-                                height={50}
+                                width={200}
+                                height={150}
                                 alt="symbol"
                                 className='md:w-[280px] md:h-[150px] z-10 order-1 -mt-10 scale-[0.4] md:scale-[0.8]'
                             />
