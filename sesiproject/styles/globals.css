@@ -1,7 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @font-face {
   font-family: 'Waterfall';
@@ -16,12 +18,18 @@
 }
 
 @font-face {
-  font-family: 'PP Neue Machina';
-  src: url('../public/font/PPNeueMachina-InktrapRegular.ttf') format('ttf'),
-       url('../public/font/PPNeueMachina-InktrapRegular.ttf') format('ttf');
-  font-weight: 400, 800;
+  font-family: 'PPNeueMachina';
+  src: url('../public/font/PPNeueMachina-InktrapRegular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-
+@font-face {
+  font-family: 'PPNeueMachina';
+  src: url('../public/font/PPNeueMachina-InktrapUltraboldItalic.otf') format('otf');
+  font-weight: 800;
+  font-style: bold;
+  font-display: swap;
+}
 

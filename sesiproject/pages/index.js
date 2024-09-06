@@ -1,43 +1,33 @@
 import NavBar from '../components/NavBar';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import Project from '../components/Project';
 import ImageGallery from '../components/Imagegallery';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
   return (
     <div>
       <NavBar />
 
-      <div className="w-full h-auto bg-custom-white text-center flex flex-col items-center justify-center px-4 md:flex-row md:gap-28 md:px-12 md:pb-20 text-black z-[8]">
-        <div className="flex flex-col gap-8 md:gap-12 max-w-lg md:px-6 mt-32 md:mt-12">
+      <div className="w-full h-full bg-custom-white text-center flex flex-col items-center justify-center px-4 md:flex-row md:gap-28 md:px-12 md:pb-48 text-black z-[8]">
+        <div className="flex flex-col gap-8 md:gap-12 max-w-lg px-6  md:px-6 mt-32 md:mt-12">
           <div>
-            <h1 className="text-6xl font-neuemachina font-normal -mt-10 md:text-8xl md:mt-12 z-[25]">
-              Lorem ipsum consecte
+            <h1 className=" w-[17px] md:w-[450px] text-4xl font-neuemachina font-normal text-left mt-10 md:text-7xl md:mt-12 z-[25]">
+              Spectacular Enterpreneurial Successful Innovative
             </h1>
           </div>
       
-          <div className="">
-            <div className=''>
-              <img
-                src='/Ellipse5.svg'
-                width={2000}
-                height={2000}
-                className='z-10 relative'
-              />
-            </div>
+         <div className="-ml-28">
+            <img
+              src='/object1.png'
+              className='z-10 order-1 -mt-10 scale-[0.5] md:scale-[0.8]'
+            />
+          </div> 
 
-            <div className=' absolute top-[250px] md:top-[450px] z-20'>
-              <Image
-                src='/object1.png'
-                width={200}
-                height={200}
-              />
-            </div>
-
-          </div>
-
-          <div className='flex flex-col text-justify justify-start gap-4 md:mb-16'>
-            <p className="font-cabinetGrotesk font-medium text-black text-base md:text-lg">
+          <div className='flex flex-col text-left justify-start gap-4 md:mb-16 -mt-10 '>
+            <p className="font-cabinetGrotesk font-medium  text-black  text-base md:text-lg">
              Born into the royal family of Maseno in Ikoga-Zebbe, located in the Badagry Local Government area of Lagos State,
               Sesi Oluwaseun Whingan is a Nigerian Politician and a current House of Representatives member in the 10th National Assembly.
 
@@ -47,18 +37,18 @@ export default function Home() {
           </div>
          
         </div>
-        <div className="mt-8 md:mt-0">
+        <div className="mt-8 md:mt-20">
           <Image
             src="/picture.png"
             width={300}
             height={350}
             alt="Sample description"
-            className=" rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[100px] md:rounded-tl-[219px] md:rounded-tr-[219px] md:rounded-br-[219px] md:rounded-bl-[219px] md:w-[500px] md:h-[520px] mb-20 md:mb-2"
+            className=" rounded-t-[50px] rounded-b-[50px] md:rounded-b-[180px] md:rounded-t-[180px] align-top md:w-[550px] md:h-[590px] mb-20 md:mb-2"
           />
         </div>
       </div>
 
-      <div className="h-full md:h-auto bg-custom-orange rounded-t-[50px] md:rounded-t-[150px] flex flex-col items-center justify-center md:flex-row -mt-16 md:pb-24 md:-mt-32 z-[8]">
+      <div className="relative h-full md:h-auto bg-custom-orange md:rounded-t-[150px] flex flex-col items-center justify-center md:flex-row -mt-10 md:pb-56 md:-mt-28 z-[8] shadow-[inset_0_15px_10px_-10px_rgba(0,0,0,0.3)]">
         <div className="w-full max-w-6xl px-2">
           <div className="flex items-center justify-center gap-6 md:gap-8 mb-6 mt-12">
             <div>
@@ -76,30 +66,54 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className='flex flex-col md:grid md:grid-cols-[1fr_2fr] gap-6 md:gap-4'>
+          <div className='flex flex-col md:flex md:flex-row gap-6 md:gap-0'>
             <div className="mt-6 text-center">
-              <p className="relative md:w-[365px] mx-3 text-lg text-justify text-custom-white mt-2 md:mx-0 md:mt-40">
-                Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+              <p className=" font-cabinetGrotesk relative md:w-[365px] mx-3 text-lg md:text-left text-custom-white mt-2 md:-ml-8 md:mt-60">
+                Sesi Whingan is a member of the All Progressive Congress (APC) representing Badagry Federal Constituency in the 10th National Assembly.
+                Through strategic partnerships and initiatives, he is a vocal advocate for development in Badagry.
               </p>
             </div>
-            <div>
+            <div className='ml-0 md:-ml-10'>
               <ImageGallery/>
             </div>
+            <div className='md:mt-96 invisible md:visible md:-mr-[200px] '>
+              <img
+                src='/object1.png'
+                className='z-10 order-1 -mt-10 scale-[0.6] md:scale-[1.3]'
+              />
+            </div>
           </div>
-          
         </div>
       </div>
 
-      <div className="relative  w-full h-auto  items-center justify-center bg-custom-white rounded-t-[50px] md:rounded-t-[150px] flex flex-col  md:flex-row p-4 md:p-6 -mt-14 md:-mt-28 z-[8]">
-        <div className='flex flex-col md:flex-row gap-8 md:gap-24 p-4 md:p-14'>
+      <div className="relative w-full h-auto  bg-custom-white rounded-t-[50px] md:rounded-t-[150px] p-4 -mt-10 md:-mt-32 shadow-[inset_0_15px_10px_-10px_rgba(0,0,0,0.3)] z-[8]">
+        <div>
+          <h1 className='font-neuemachina mt-10 text-custom-green text-4xl md:text-[64px] justify-center text-center'> Projects</h1>
+        </div>
+        <div className=' flex flex-col'>
+          <div className='block justify-center items-center'>
+            <Project/>
+          </div>
+          <div className='flex justify-end items-end'>
+            <Image
+              src='/Frame.png'
+              width={150}
+              height={50}
+              className='md:w-[255px] h-[86px]'
+            />
+          </div>
+        </div>
+      </div>
+ 
+      <div className='bg-custom-white items-center justify-center'>
+        <div className='flex flex-col md:flex-row gap-8 md:gap-24 p-4 md:p-14 justify-center items-center'>
           <div className='justify-center items-center'>
             <Image
-              src='/rectangle.png'
+              src='/Images/ReachOut.jpg'
               width={300}
               height={200}
               alt='Rectangle shape'
-              className='ml-8 md:ml-2 md:w-[460px] md:h-[360] justify-center'
+              className='ml-8 md:ml-2 md:w-[460px] md:h-[360] justify-center rounded-[75px]'
             />
           </div>  
           <div>
@@ -107,22 +121,22 @@ export default function Home() {
               <div className="mb-6">
                 <input
                   type="text"
-                  placeholder="First Name"
-                  className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:border-b-custom-green"
+                  placeholder="YOUR NAME"
+                  className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:placeholder-transparent"
                 />
               </div>
               <div className="mb-6">
                 <input
-                 type="text"
-                 placeholder="Last Name"
-                 className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:border-b-custom-green"
+                 type="email"
+                 placeholder="YOUR EMAIL"
+                 className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:placeholder-transparent"
                 />
               </div>
               <div className="mb-6">
                 <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:border-b-custom-green"
+                  type="text"
+                  placeholder="YOUR REQUEST/CONTRIBUTION"
+                  className="w-[350px] md:w-[407px] bg-custom-white px-4 py-2 border-b-2 border-b-custom-orange focus:outline-none focus:placeholder-transparent"
                 />
               </div>
               <button

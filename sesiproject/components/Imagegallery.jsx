@@ -12,7 +12,7 @@ const ImageGallery = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); 
+    handleResize(); // Initial check when component mounts
 
     window.addEventListener('resize', handleResize);
 
@@ -22,45 +22,54 @@ const ImageGallery = () => {
   }, []);
 
   const imageSources = [
-    '/picture.png',
-    '/picture.png',
-    '/picture.png',
-    '/picture.png',
-    '/picture.png',
+    '/Images/1.jpg',
+    '/Images/2.jpg',
+    '/Images/3.jpg',
+    '/Images/4.jpg',
+    '/Images/5.jpg',
   ];
 
   const settings = {
-    dots: true, 
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, 
-    autoplaySpeed: 2500, 
-    arrows: false, 
+    autoplay: true,
+    autoplaySpeed: 2500,
+    arrows: false,
   };
 
   const images = imageSources.map((src, index) => (
-    <div key={index} className="flex justify-center items-center h-full">
-      <Image
-        src={src}
-        width={145}
-        height={148}
-        alt={`Blog image ${index + 1}`}
-        className="  rounded-t-[30px] rounded-b-[30px] md:w-[200px] md:h-[209px]"
-      />
+    <div key={index} className="w-[] py-[20px] flex justify-center items-center h-full">
+      <div className=''>
+        <Image
+          src={src}
+          width={200}
+          height={200}
+          alt={`Blog image ${index + 1}`}
+          className="rounded-t-[25px] h-[400px] w-[450px] rounded-b-[25px] md:w-[150px] md:h-[150px]"
+        />
+      </div>
     </div>
   ));
 
   return (
-    <div className="mb-16">
+    <div className="mb-16 justify-center items-center">
       {isMobile ? (
-        <Slider {...settings} className="flex justify-center items-center ml-32">
-          {images}
-        </Slider>
+        <div className='block justify-center items-center '>
+          <Slider {...settings} className="flex justify-center items-center">
+            {images}
+          </Slider>
+        </div>
       ) : (
-        <div className="grid grid-cols-2 grid-rows-3 gap-4 md:grid-cols-3 md:grid-rows-2">
-          {images}
+        <div className="grid grid-cols-3 gap-8 md:grid-rows-[auto_auto]">
+          <div className="col-span-3 grid grid-cols-3 gap-8">
+            {images.slice(0, 3)}
+          </div>
+          <div className="col-span-3 flex justify-center gap-10">
+            {images.slice(3, 5)}
+          </div>
         </div>
       )}
     </div>

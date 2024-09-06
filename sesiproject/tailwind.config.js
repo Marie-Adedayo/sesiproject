@@ -10,7 +10,7 @@ module.exports = {
         sacramento: ["Sacramento", "system-ui"],
         cabinetGrotesk: ["Cabinet Grotesk", "sans-serif"],
         bebas: ["Bebas Neue", "sans-serif"],
-        neuemachina: ["PP Neue Machina", "sans-serif"],
+        neuemachina: ["PPNeueMachina"],
       },
       colors: {
         "custom-green": "#1B3D38",
