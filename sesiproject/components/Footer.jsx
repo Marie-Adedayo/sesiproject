@@ -68,9 +68,12 @@ function Footer()  {
                             <h2 className="text-3xl md:text-5xl text-black font-sacramento font-normal ">Whingan</h2>
                         </Link>
                         <div className=" md:-mr-24">
-                            <img
+                            <Image
                                 src='/object1.png'
-                                className='z-10 order-1 -mt-10 scale-[0.4] md:scale-[0.8]'
+                                width={50}
+                                height={50}
+                                alt="symbol"
+                                className='md:w-[280px] md:h-[150px] z-10 order-1 -mt-10 scale-[0.4] md:scale-[0.8]'
                             />
                         </div>
                     </div>

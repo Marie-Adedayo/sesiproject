@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '../components/Footer';
 import Project from '../components/Project';
 import ImageGallery from '../components/Imagegallery';
@@ -20,21 +21,28 @@ export default function Home() {
           </div>
       
          <div className="-ml-28">
-            <img
+            <Image
               src='/object1.png'
-              className='z-10 order-1 -mt-10 scale-[0.5] md:scale-[0.8]'
+              width={100}
+              height={100}
+              alt='symbol'
+              className='md:w-[280px] md:h-[150px] z-10 order-1 -mt-10 scale-[0.5] md:scale-[0.8]'
             />
           </div> 
 
-          <div className='flex flex-col text-left justify-start gap-4 md:mb-16 -mt-10 '>
-            <p className="font-cabinetGrotesk font-medium  text-black  text-base md:text-lg">
-             Born into the royal family of Maseno in Ikoga-Zebbe, located in the Badagry Local Government area of Lagos State,
+          <div className='flex flex-col text-left justify-start gap-4 md:mb-16 -mt-10'>
+            <p className="font-cabinetGrotesk font-medium text-black text-base md:text-lg">
+              Born into the royal family of Maseno in Ikoga-Zebbe, located in the Badagry Local Government area of Lagos State,
               Sesi Oluwaseun Whingan is a Nigerian Politician and a current House of Representatives member in the 10th National Assembly.
-
             </p>
-            <a href='/about' className='font-neuemachina font-extrabold text-xl text-custom-green'>Learn More &#x2192;</a>
-
+            
+            <Link href='/about' legacyBehavior>
+              <a className='font-neuemachina font-extrabold text-xl text-custom-green'>
+                Learn More &#x2192;
+              </a>
+            </Link>
           </div>
+
          
         </div>
         <div className="mt-8 md:mt-20">
@@ -77,9 +85,12 @@ export default function Home() {
               <ImageGallery/>
             </div>
             <div className='md:mt-96 invisible md:visible md:-mr-[200px] '>
-              <img
+              <Image
                 src='/object1.png'
-                className='z-10 order-1 -mt-10 scale-[0.6] md:scale-[1.3]'
+                width={50}
+                height={50}
+                alt='symbol'
+                className='md:w-[200px] md:h-[100px] z-10 order-1 -mt-10 scale-[0.6] md:scale-[1.3]'
               />
             </div>
           </div>
